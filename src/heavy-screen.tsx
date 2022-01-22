@@ -17,12 +17,14 @@ const OptimizedHeavyScreen = ({
     </Transition.Together>
   ),
   style,
+  pointerEvents,
   children,
   placeHolder: Placeholder,
 }: Props) => {
   const { transitionRef, areInteractionsComplete } = useAfterInteractions()
   return (
     <Transitioning.View
+      pointerEvents={pointerEvents}
       transition={transition}
       style={style}
       ref={transitionRef}
